@@ -1,0 +1,93 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  color: $white;
+  background-color: $main;
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    animation-name: sticky;
+    animation-duration: 0.4s;
+  }
+  &__inner {
+    padding: 24px 0 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-logo {
+      font-size: 32px;
+      line-height: 38px;
+      font-weight: 700;
+      color: $white;
+      font-family: $arial;
+    }
+  }
+}
+// 1380px
+@mixin header-xxxlg-xxxxlg {
+  .header {
+    &__inner {
+      &-logo {
+        font-size: 28px;
+        line-height: 34px;
+      }
+      .button {
+        padding: 16px 32px;
+      }
+    }
+  }
+}
+// 1180px
+@mixin header-xlg-xxlg {
+  .header {
+    &__inner {
+      &-logo {
+        font-size: 24px;
+        line-height: 30px;
+      }
+      .button {
+        font-size: 16px;
+        padding: 12px 24px;
+        border-radius: 22px;
+      }
+    }
+  }
+}
+// 1024px
+@mixin header-lg-xlg {
+  .header {
+    &__inner {
+      padding: 24px 0;
+      & > .button {
+        display: none;
+      }
+    }
+  }
+}
+// 540px
+@mixin header-xsm-sm {
+  .header {
+    &__inner {
+      padding: 20px 0;
+      &-logo {
+        font-size: 20px;
+        line-height: 25px;
+      }
+    }
+  }
+}
+@keyframes sticky {
+  0% {
+    top: -60px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}

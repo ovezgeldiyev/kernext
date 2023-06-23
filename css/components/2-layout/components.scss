@@ -1,0 +1,95 @@
+h1 {
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 120%;
+}
+
+h2 {
+
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 62px;
+    letter-spacing: -0.5px;
+    &.sm {
+        font-weight: 700;
+        font-size: 38px;
+        line-height: 48px;
+        font-family: $arial;
+        letter-spacing: unset;
+    }
+}
+
+h4 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 26px;
+}
+
+h5 {
+
+}
+
+h6 {
+
+}
+p {
+    &.sm {
+        font-size: 16px;
+        line-height: 28px;   
+    }
+    &.big {
+        font-size: 24px;
+        line-height: 32px;  
+    }
+}
+.main {
+    overflow: hidden;
+    &__bg {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        pointer-events: none;
+        img {
+            width: 100%;
+        }
+    }
+}
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    line-height: 100%;
+    font-family: $workSans;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s ease;
+    &.uniq {
+        color: $white;
+        padding: 18px 36px;
+        border-radius: 26px;
+        border: 1px solid $white;
+        &:hover {
+            background-color: $white;
+            color: $main;
+        }
+    }
+    &.primary {
+        padding: 21px 76px;
+        border-radius: 26px;
+        background-color: $primary;
+        &:hover {
+            opacity: 1;
+            color: $primary;
+            background-color: $white;
+        }
+    }
+}
